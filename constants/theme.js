@@ -1,16 +1,18 @@
 import {Dimensions} from 'react-native';
+import {ms} from 'react-native-size-matters';
 const {width, height} = Dimensions.get('window');
 
 export const COLORS = {
   // base colors
-  primary: '#00996D', // Green
-  secondary: '#606d87', // Gray
-
+  primary: '#4C4DDC',
+  opacityPrimary: 'rgba(76,77,220, 0.1)',
+  opacityGray: 'rgba(135,135,135, 0.3)',
   // colors
-  black: '#1E1F20',
+  black: '#101010',
   white: '#FFFFFF',
   lightGray: '#eff2f5',
-  gray: '#BEC1D2',
+  gray: '#878787',
+  yellow: '#FFD33C',
 };
 export const SIZES = {
   // global sizes
@@ -40,14 +42,30 @@ export const FONTS = {
     fontSize: SIZES.largeTitle,
     lineHeight: 55,
   },
-  h1: {fontFamily: 'Roboto-Black', fontSize: SIZES.h1, lineHeight: 36},
-  h2: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h2, lineHeight: 30},
-  h3: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h3, lineHeight: 22},
-  h4: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h4, lineHeight: 22},
-  body1: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body1, lineHeight: 36},
-  body2: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body2, lineHeight: 30},
-  body3: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body3, lineHeight: 22},
-  body4: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body4, lineHeight: 22},
+  h1: {fontFamily: 'Roboto-Black', fontSize: ms(SIZES.h1), lineHeight: ms(36)},
+  h2: {fontFamily: 'Roboto-Bold', fontSize: ms(SIZES.h2), lineHeight: ms(30)},
+  h3: {fontFamily: 'Roboto-Bold', fontSize: ms(SIZES.h3), lineHeight: ms(22)},
+  h4: {fontFamily: 'Roboto-Bold', fontSize: ms(SIZES.h4), lineHeight: ms(22)},
+  body1: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: ms(SIZES.body1),
+    lineHeight: ms(36),
+  },
+  body2: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: ms(SIZES.body2),
+    lineHeight: ms(30),
+  },
+  body3: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: ms(SIZES.body3),
+    lineHeight: ms(22),
+  },
+  body4: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: ms(SIZES.body4),
+    lineHeight: ms(22),
+  },
 };
 
 const appTheme = {COLORS, SIZES, FONTS};
